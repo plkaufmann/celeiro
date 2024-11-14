@@ -1,0 +1,150 @@
+/* Estilo para o Conteúdo do Site */
+body, h1, h2, p {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4b2e1e;
+}
+
+#descricao, #galeria, #localizacao, #contato {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Fundo do site com imagem atenuada */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('fachada01.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    position: relative;
+}
+
+/* Camada de atenuação */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Atenua com uma camada branca semi-transparente */
+    z-index: -1;
+}
+
+/* Estilo para os parágrafos */
+p {
+    text-align: justify; /* Alinha o texto tanto à esquerda quanto à direita */
+    margin: 0 auto; /* Centraliza o parágrafo dentro da seção */
+    max-width: 800px; /* Define uma largura máxima para que o texto não ocupe toda a tela */
+}
+
+/* Estilo para a Imagem de Topo */
+#imagem-topo img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra ao redor da imagem */
+}
+
+/* Estilo para a Seção de Comodidades */
+#comodidades {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#comodidades h2 {
+    text-align: center;
+    color: #4b2e1e;
+    margin-bottom: 20px;
+}
+
+.comodidades-destaque h3,
+.destaque-cafe h3,
+.observacoes h3 {
+    color: #4b2e1e;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.comodidades-destaque ul,
+.observacoes ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.comodidades-destaque li,
+.observacoes li {
+    margin: 8px 0;
+}
+
+.destaque-cafe {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f2e7;
+    border-left: 5px solid #4b2e1e;
+    border-radius: 5px;
+}
+
+.destaque-cafe p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Estilo da Galeria de Fotos */
+#galeria .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#galeria .grid img {
+    width: 150px;         /* Largura fixa */
+    height: 150px;        /* Altura fixa */
+    object-fit: cover;    /* Faz a imagem preencher o espaço de 150x150px */
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+#galeria .grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o lightbox overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse a tela */
+}
+
+.lightbox-overlay img {
+    max-width: 90%; /* Limita a largura da imagem a 90% da tela */
+    max-height: 90%; /* Limita a altura da imagem a 90% da tela */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destaque */
+}
