@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url('fachada01.jpg'); /* Define a imagem de fundo */
+    background-image: url('fachada01.JPG'); /* Define a imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a tela */
     background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
     background-position: center; /* Centraliza a imagem */
