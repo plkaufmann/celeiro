@@ -107,14 +107,14 @@ p {
 }
 
 /* Estilo da Galeria de Fotos */
-#galeria .grid {
+#galeria .grid, #antes .grid {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
 
-#galeria .grid img {
+#galeria .grid img, #antes .grid img {
     width: 150px;         /* Largura fixa */
     height: 150px;        /* Altura fixa */
     object-fit: cover;    /* Faz a imagem preencher o espaço de 150x150px */
@@ -124,9 +124,10 @@ p {
     transition: transform 0.2s;
 }
 
-#galeria .grid img:hover {
+#galeria .grid img:hover, #antes .grid img:hover {
     transform: scale(1.05);
 }
+
 
 /* Estilo para o lightbox overlay */
 .lightbox-overlay {
@@ -148,3 +149,59 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destaque */
 }
+
+/* Estilo para a seção de contato */
+#contato {
+    padding: 20px;
+    max-width: 600px; /* Limita a largura máxima para telas maiores */
+    margin: auto; /* Centraliza a seção */
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 15px; /* Espaço entre os campos */
+}
+
+#contato label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espaço entre o rótulo e o campo */
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
+    width: 100%; /* Ocupa a largura total do contêiner */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que o padding não ultrapasse a largura do contêiner */
+}
+
+#contato button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4b2e1e; /* Cor do botão */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#contato button:hover {
+    background-color: #3a2417; /* Cor ao passar o mouse */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 600px) {
+    #contato {
+        padding: 10px;
+    }
+
+    #contato form {
+        gap: 10px;
+    }
+}
+
