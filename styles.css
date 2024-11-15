@@ -152,56 +152,28 @@ p {
 
 /* Estilo para a seção de contato */
 #contato {
+    text-align: center; /* Centraliza o texto e o ícone */
     padding: 20px;
-    max-width: 600px; /* Limita a largura máxima para telas maiores */
-    margin: auto; /* Centraliza a seção */
+    margin: auto;
 }
 
-#contato form {
-    display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 15px; /* Espaço entre os campos */
+#contato p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-#contato label {
-    font-weight: bold;
-    margin-bottom: 5px; /* Espaço entre o rótulo e o campo */
+.email-link {
+    text-decoration: none; /* Remove o sublinhado do link */
 }
 
-#contato input[type="text"],
-#contato input[type="email"],
-#contato textarea {
-    width: 100%; /* Ocupa a largura total do contêiner */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box; /* Garante que o padding não ultrapasse a largura do contêiner */
-}
-
-#contato button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4b2e1e; /* Cor do botão */
-    color: white;
-    font-weight: bold;
+.email-icon {
+    width: 80px; /* Define o tamanho do ícone */
+    height: auto;
+    transition: transform 0.2s; /* Adiciona um efeito de zoom */
     cursor: pointer;
-    font-size: 1em;
 }
 
-#contato button:hover {
-    background-color: #3a2417; /* Cor ao passar o mouse */
+.email-icon:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
 }
-
-/* Ajustes para dispositivos móveis */
-@media (max-width: 600px) {
-    #contato {
-        padding: 10px;
-    }
-
-    #contato form {
-        gap: 10px;
-    }
-}
-
